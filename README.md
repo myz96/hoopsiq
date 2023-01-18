@@ -16,6 +16,9 @@ SEIFXR10ANZ Project 1
  - If all letters in a row are green, then show 'Win' display
  - If after 6th row, you have not won, then show 'Lose' display
 
+### Game URL
+[Insert game URL here]
+
 ## Include:
 [] Explanation of technologies used?
 [] Approach taken
