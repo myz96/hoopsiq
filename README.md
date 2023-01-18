@@ -1,6 +1,11 @@
 # Wordle
 SEIFXR10ANZ Project 1
 
+## Technologies
+- HTML
+- CSS
+- Javascript
+
 ## Approach
 1. Create letter grid
  - When a key is input, the letter grid should display the letter
@@ -17,11 +22,11 @@ SEIFXR10ANZ Project 1
  - If after 6th row, you have not won, then show 'Lose' display
 
 ### Game URL
-[Insert game URL here]
+https://myz96.github.io/wordle/
 
 ## Include:
-[] Explanation of technologies used?
-[] Approach taken
+[x] Explanation of technologies used
+[x] Approach taken
 [] Installation instructions
 [] Unsolved problems
 
