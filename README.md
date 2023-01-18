@@ -25,11 +25,11 @@ SEIFXR10ANZ Project 1
 https://myz96.github.io/wordle/
 
 ## Include:
-[x] Explanation of technologies used
-[x] Approach taken
-[] Installation instructions
-[] Unsolved problems
+- [x] Explanation of technologies used
+- [x] Approach taken
+- [] Installation instructions
+- [] Unsolved problems
 
 ## Requirements:
-[] Link to hosted working game
-[] Link in URL section of Github
+- [] Link to hosted working game
+- [] Link in URL section of Github
