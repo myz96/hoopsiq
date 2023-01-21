@@ -1,5 +1,6 @@
-# Wordle
+# Who's that NBA Player?
 SEIFXR10ANZ Project 1
+Wordle Alternative
 
 ## Technologies
 - HTML
@@ -7,19 +8,20 @@ SEIFXR10ANZ Project 1
 - Javascript
 
 ## Approach
-1. Create letter grid
- - When a key is input, the letter grid should display the letter
- - *Optional* When the keyboard is clicked, the letter should display 
- - If letter + position matches the word then turn green
- - If letter appears in the word then turn yellow
- - If letter does not match any letters in the word turn grey
-2. *Optional* Create keyboard
- - If letter has been selected and matches word then turn green
- - If letter has been selected and does not match word then turn dark grey
-3. Create game logic
- - Select random word from wordle list
- - If all letters in a row are green, then show 'Win' display
- - If after 6th row, you have not won, then show 'Lose' display
+1. Create UI
+ - Create guessing grid
+  - Guessing columns include Team, Position, PPG, APG, RPG
+ - Create Input List
+  - List should contain list of all NBA players
+  - List should only show players that text-match the input value
+  - Player cards in the list should show their Team, Position, PPG, APG & RPG
+ - *Optional* Add team logos and team divisions at the bottom
+2. Add game logic
+ - Select random player from NBA player list
+ - If Team or Position are wrong, then make a cross appear
+ - If PPG, APG, RPG are wrong, make an arrow appear, making it higher or lower
+ - If all columns are guessed correctly, then display win page
+ - After 6 guesses, display lose page
 
 ### Game URL
 https://myz96.github.io/wordle/
@@ -27,9 +29,15 @@ https://myz96.github.io/wordle/
 ## Include:
 - [x] Explanation of technologies used
 - [x] Approach taken
-- [] Installation instructions
-- [] Unsolved problems
+- [ ] Installation instructions
+- [ ] Unsolved problems
 
 ## Requirements:
-- [] Link to hosted working game
-- [] Link in URL section of Github
+- [x] Link to hosted working game
+- [x] Link in URL section of Github
+
+## Next steps:
+- Improve UI by having teams at the bottom (highlighted if still available) and having a list of player photos beneath that accordian out (highlighted if still available)
+- Build a "Who's that NBA Great?" extension that guesses Hall of Fame players
+ - Additional information such as # of MVPs, # of All-NBA picks, # of championships 
+ - Need to scrape data from https://craftednba.com/hall-of-fame/players
