@@ -1,3 +1,8 @@
+// Gathering player data
+// Player data pulled from https://www.nbastuffer.com/player-stats/
+// Converted to JSON using https://products.aspose.app/cells/conversion/excel-to-json 
+// -------------------------------------------------------------------------------------------
+
 const playerList = [
     {
      "FULL NAME": "Luka Doncic",
@@ -11023,6 +11028,15 @@ const playerList = [
 let playerNames = playerList.map((player) => {return player["FULL NAME"]})
 console.log(playerNames)
 
+// Creating game logic
+// -------------------------------------------------------------------------------------------
+const checkIfCorrect = (player) = {
+    // [INSERT GAME LOGIC HERE] 
+}
+
+
+// Building search bar functionality
+// -------------------------------------------------------------------------------------------
 const searchWrapper = document.querySelector(".search-input")
 const inputBox = searchWrapper.querySelector("input")
 const resultsBox = searchWrapper.querySelector(".search-results")
@@ -11055,10 +11069,10 @@ inputBox.addEventListener("keyup", (event) => {
         // Choose player that is selected
         let searchList = resultsBox.querySelectorAll('li')
         for (let result of searchList) {
-            result.addEventListener('click', "checkIfCorrect(player)") // [INSERT GAME LOGIC HERE]
+            result.addEventListener('click', "checkIfCorrect(player)")  // Invoke function when function updates
         }
     } else {
-
+        searchWrapper.classList.remove('active')
     }
 })
 
