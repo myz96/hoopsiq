@@ -11,7 +11,7 @@ Wordle Alternative
 1. Create UI
  - Create guessing grid
   - Guessing columns include Team, Position, PPG, APG, RPG
- - Create Input List
+ - Create Search List
   - List should contain list of all NBA players
   - List should only show players that text-match the input value
   - Player cards in the list should show their Team, Position, PPG, APG & RPG
