@@ -11035,7 +11035,7 @@ console.log(chosenPlayer)
 
 // Set up counters
 let guessCounter = 0
-
+let maximumGuessesAllowed = 6
 
 const checkIfCorrect = (element) => {
     let selectedPlayerName = element.target.parentNode.dataset.name
@@ -11098,7 +11098,7 @@ const checkIfCorrect = (element) => {
         guessCounter ++
 
         // Lost after four guesses
-        if (guessCounter === 4) 
+        if (guessCounter === maximumGuessesAllowed) 
             alert("You lose :(")
     }
 }
@@ -11137,7 +11137,7 @@ inputBox.addEventListener("keyup", (event) => {
             return player["FULL NAME"].toLowerCase().startsWith(userInput.toLowerCase())
         })
         resultsArr = resultsArr.map((player) => {
-            return player = `<li data-name = "${player["FULL NAME"]}"><span class = "player-name">${player["FULL NAME"]}</span><span class = "player-info">${player["TEAM"].toLocaleUpperCase()} PPG: ${player["PPG"]} APG: ${player["APG"]} RPG: ${player["RPG"]}</span></li>`
+            return player = `<li data-name = "${player["FULL NAME"]}"><span class = "player-name">${player["FULL NAME"]}</span><span class = "player-info">${player["TEAM"].toLocaleUpperCase()} ${player["POS"]} PPG: ${player["PPG"]} APG: ${player["APG"]} RPG: ${player["RPG"]}</span></li>`
         })
         // console.log(resultsArr)
         searchWrapper.classList.add('active')
@@ -11155,7 +11155,16 @@ inputBox.addEventListener("keyup", (event) => {
 
 
 
+// Show instructions
+// -------------------------------------------------------------------------------------------
 
-
+let howToPlayLink = document.querySelector('#how-to-play')
+let overlayText = document.querySelector('.overlay')
+howToPlayLink.addEventListener('click', () => {
+    overlayText.classList.add('active')
+})
+overlayText.addEventListener('click', () => {
+    overlayText.classList.remove('active')
+})
 
 
