@@ -15,7 +15,7 @@ Wordle Alternative
   - List should contain list of all NBA players
   - List should only show players that text-match the input value
   - Player cards in the list should show their Team, Position, PPG, APG & RPG
- - *Optional* Add team logos and team divisions at the bottom
+ - Add team logos and team divisions at the bottom
 2. Add game logic
  - Select random player from NBA player list
  - If Team or Position are wrong, then make a cross appear
@@ -31,13 +31,8 @@ No need to install anything
 Free to play on any web browswer
 See https://myz96.github.io/wordle/
 
-## Requirements:
-- [x] Link to hosted working game
-- [x] Link in URL section of Github
-
 ## Next steps:
 - Improve UI
- - Select players by teams at the bottom 
  - Include a player silohette of each player
 - Build a "Who's that NBA Great?" extension that guesses Hall of Fame players
  - Additional information such as # of MVPs, # of All-NBA picks, # of championships 

@@ -11025,6 +11025,207 @@ const playerList = [
     }
 ]
 
+// Adding team conference, division and team logos
+// -------------------------------------------------------------------------------------------
+for (let player of playerList) {
+    switch (player["TEAM"]) {
+        case 'Gol':
+            player["CONF"] = './images/western-conference-logo.png'
+            player["DIV"] = 'PAC'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-golden-state-warriors-logo-2020-300x300.png'
+            break
+        case 'Dal':
+            player["CONF"] = './images/western-conference-logo.png'
+            player["DIV"] = 'SW'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-dallas-mavericks-logo-300x300.png'
+            break
+        case 'Phi':
+            player["CONF"] = './images/eastern-conference-logo.png'
+            player["DIV"] = 'ATL'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-philadelphia-76ers-logo-230x230.png'
+            break
+        case 'Bos':
+            player["CONF"] = './images/eastern-conference-logo.png'
+            player["DIV"] = 'ATL'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-boston-celtics-logo-230x230.png'
+            break
+        case 'Mil':
+            player["CONF"] = './images/eastern-conference-logo.png'
+            player["DIV"] = 'CTR'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-milwaukee-bucks-logo-230x230.png'
+            break
+        case 'Okc':
+            player["CONF"] = './images/western-conference-logo.png'
+            player["DIV"] = 'NW'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-oklahoma-city-thunder-logo-230x230.png'
+            break
+        case 'Lal':
+            player["CONF"] = './images/western-conference-logo.png'
+            player["DIV"] = 'PAC'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-los-angeles-lakers-logo-230x230.png'
+            break
+        case 'Bro':
+            player["CONF"] = './images/eastern-conference-logo.png'
+            player["DIV"] = 'ATL'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-brooklyn-nets-logo-230x230.png'
+            break
+        case 'Por':
+            player["CONF"] = './images/western-conference-logo.png'
+            player["DIV"] = 'NW'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-portland-trail-blazers-logo-230x230.png'
+            break
+        case 'Cle':
+            player["CONF"] = './images/eastern-conference-logo.png'
+            player["DIV"] = 'CTR'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/Clevelan-Cavaliers-logo-2022-230x230.png'
+            break
+        case 'Mem':
+            player["CONF"] = './images/western-conference-logo.png'
+            player["DIV"] = 'SW'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-memphis-grizzlies-logo-230x230.png'
+            break
+        case 'Atl':
+            player["CONF"] = './images/eastern-conference-logo.png'
+            player["DIV"] = 'SE'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-atlanta-hawks-logo-230x230.png'
+            break
+        case 'Pho':
+            player["CONF"] = './images/western-conference-logo.png'
+            player["DIV"] = 'PAC'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-phoenix-suns-logo-230x230.png'
+            break
+        case 'Chi':
+            player["CONF"] = './images/eastern-conference-logo.png'
+            player["DIV"] = 'CTR'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-chicago-bulls-logo-230x230.png'
+            break
+        case 'Nor':
+            player["CONF"] = './images/western-conference-logo.png'
+            player["DIV"] = 'SW'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-new-orleans-pelicans-logo-230x230.png'
+            break
+        case 'Den':
+            player["CONF"] = './images/western-conference-logo.png'
+            player["DIV"] = 'NW'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-denver-nuggets-logo-2018-230x230.png'
+            break
+        case 'Tor':
+            player["CONF"] = './images/eastern-conference-logo.png'
+            player["DIV"] = 'ATL'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-toronto-raptors-logo-2020-230x230.png'
+            break
+        case 'Uta':
+            player["CONF"] = './images/western-conference-logo.png'
+            player["DIV"] = 'NW'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/utah-jazz-logo-2022-230x230.png'
+            break
+        case 'Nyk':
+            player["CONF"] = './images/eastern-conference-logo.png'
+            player["DIV"] = 'ATL'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-new-york-knicks-logo-230x230.png'
+            break
+        case 'Sac':
+            player["CONF"] = './images/western-conference-logo.png'
+            player["DIV"] = 'PAC'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-sacramento-kings-logo-230x230.png'
+            break
+        case 'Min':
+            player["CONF"] = './images/western-conference-logo.png'
+            player["DIV"] = 'NW'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-minnesota-timberwolves-logo-230x230.png'
+            break
+        case 'Cha':
+            player["CONF"] = './images/eastern-conference-logo.png'
+            player["DIV"] = 'SE'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-charlotte-hornets-logo-230x230.png'
+            break
+        case 'Lac':
+            player["CONF"] = './images/western-conference-logo.png'
+            player["DIV"] = 'PAC'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-la-clippers-logo-230x230.png'
+            break
+        case 'Was':
+            player["CONF"] = './images/eastern-conference-logo.png'
+            player["DIV"] = 'SE'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-washington-wizards-logo-230x230.png'
+            break
+        case 'Mia':
+            player["CONF"] = './images/western-conference-logo.png'
+            player["DIV"] = 'PAC'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-miami-heat-logo-230x230.png'
+            break
+        case 'Hou':
+            player["CONF"] = './images/western-conference-logo.png'
+            player["DIV"] = 'PAC'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-houston-rockets-logo-2020-300x300.png'
+            break
+        case 'San':
+            player["CONF"] = './images/western-conference-logo.png'
+            player["DIV"] = 'SW'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-san-antonio-spurs-logo-230x230.png'
+            break
+        case 'Det':
+            player["CONF"] = './images/eastern-conference-logo.png'
+            player["DIV"] = 'CTR'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-detroit-pistons-logo-230x230.png'
+            break
+        case 'Orl':
+            player["CONF"] = './images/eastern-conference-logo.png'
+            player["DIV"] = 'SE'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-orlando-magic-logo-230x230.png'
+            break
+        case 'Ind':
+            player["CONF"] = './images/eastern-conference-logo.png'
+            player["DIV"] = 'CTR'
+            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-indiana-pacers-logo-230x230.png'
+            break
+    }
+}
+
+
+// Completing guessing grid
+// -------------------------------------------------------------------------------------------
+let numberOfGuessRows = 8
+
+let guessGrid = document.querySelector('.guess-grid')
+for (let i = 0; i < numberOfGuessRows; i++) {
+    let guessRow = document.createElement('div')
+    guessRow.classList.add('guess-row')
+    let playerTile = document.createElement('div')
+    playerTile.classList.add('player-tile')
+    let confTile = document.createElement('div')
+    confTile.classList.add('guess-tile')
+    confTile.classList.add('conf-tile')
+    let divTile = document.createElement('div')
+    divTile.classList.add('guess-tile')
+    divTile.classList.add('div-tile')
+    let teamTile = document.createElement('div')
+    teamTile.classList.add('guess-tile')
+    teamTile.classList.add('team-tile')
+    let positionTile = document.createElement('div')
+    positionTile.classList.add('guess-tile')
+    positionTile.classList.add('position-tile')
+    let ppgTile = document.createElement('div')
+    ppgTile.classList.add('guess-tile')
+    ppgTile.classList.add('ppg-tile')
+    let apgTile = document.createElement('div')
+    apgTile.classList.add('guess-tile')
+    apgTile.classList.add('apg-tile')
+    let rpgTile = document.createElement('div')
+    rpgTile.classList.add('guess-tile')
+    rpgTile.classList.add('rpg-tile')
+
+    guessRow.append(playerTile)
+    guessRow.append(confTile)
+    guessRow.append(divTile)
+    guessRow.append(teamTile)
+    guessRow.append(positionTile)
+    guessRow.append(ppgTile)
+    guessRow.append(apgTile)
+    guessRow.append(rpgTile)
+    
+    guessGrid.append(guessRow)
+}
 // Creating game logic
 // -------------------------------------------------------------------------------------------
 
@@ -11035,7 +11236,8 @@ console.log(chosenPlayer)
 
 // Set up counters
 let guessCounter = 0
-let maximumGuessesAllowed = 6
+let maximumGuessesAllowed = 8
+let partiallyCorrectRange = 2
 
 const checkIfCorrect = (element) => {
     let selectedPlayerName = element.target.parentNode.dataset.name
@@ -11044,52 +11246,74 @@ const checkIfCorrect = (element) => {
         console.log(selectedPlayer)
 
         let guessRows = document.querySelectorAll('.guess-row')
+        let playerTile = guessRows[guessCounter].querySelector('.player-tile')
+        let confTile = guessRows[guessCounter].querySelector('.conf-tile')
+        let divTile = guessRows[guessCounter].querySelector('.div-tile')
         let teamTile = guessRows[guessCounter].querySelector('.team-tile')
         let positionTile = guessRows[guessCounter].querySelector('.position-tile')
         let ppgTile = guessRows[guessCounter].querySelector('.ppg-tile')
         let apgTile = guessRows[guessCounter].querySelector('.apg-tile')
         let rpgTile = guessRows[guessCounter].querySelector('.rpg-tile')
 
-        // Check if team is correct
+        playerTile.innerHTML = `${selectedPlayer["FULL NAME"]}`
+
+        confTile.innerHTML = `<img class="tile-img" src="${selectedPlayer["CONF"]}">`
+        if (selectedPlayer["CONF"] === chosenPlayer["CONF"]) {
+            confTile.classList.add('correct-tile')
+        } else {
+            confTile.classList.add('wrong-tile')
+        }
+
+        divTile.innerHTML = `${selectedPlayer["DIV"]}`
+        if (selectedPlayer["DIV"] === chosenPlayer["DIV"]) {
+            divTile.classList.add('correct-tile')
+        } else {
+            divTile.classList.add('wrong-tile')
+        }
+
+        teamTile.innerHTML = `<img class="tile-img" src="${selectedPlayer["TEAM LOGO"]}">`
+        console.log(`<img class="tile-img" src="${selectedPlayer["TEAM LOGO"]}"`)
         if (selectedPlayer["TEAM"] === chosenPlayer["TEAM"]) {
-            teamTile.innerHTML = 'Yes'
+            teamTile.classList.add('correct-tile')
         } else {
-            teamTile.innerHTML = 'No'
+            teamTile.classList.add('wrong-tile')
         }
 
-        // Check if position is correct
+        positionTile.innerHTML = `${selectedPlayer["POS"]}`
         if (selectedPlayer["POS"] === chosenPlayer["POS"]) {
-            positionTile.innerHTML = 'Yes'
+            positionTile.classList.add('correct-tile')
+        } else if (chosenPlayer["POS"].includes(selectedPlayer["POS"]) || selectedPlayer["POS"].includes(chosenPlayer["POS"])) {
+            positionTile.classList.add('partially-correct-tile')
         } else {
-            positionTile.innerHTML = 'No'
+            positionTile.classList.add('wrong-tile')
         }
 
-        // Check if ppg is correct
-        if (selectedPlayer["PPG"] > chosenPlayer["PPG"]) {
-            ppgTile.innerHTML = 'Lower'
-        } else if (selectedPlayer["PPG"] === chosenPlayer["PPG"]){
-            ppgTile.innerHTML = 'Yes'
+        ppgTile.innerHTML = `${selectedPlayer["PPG"]}`
+        if (selectedPlayer["PPG"] === chosenPlayer["PPG"]) {
+            ppgTile.classList.add('correct-tile')
+        } else if (selectedPlayer["PPG"] > chosenPlayer["PPG"] - partiallyCorrectRange && selectedPlayer["PPG"] < chosenPlayer["PPG"] + partiallyCorrectRange){
+            ppgTile.classList.add('partially-correct-tile')
         } else {
-            ppgTile.innerHTML = 'Higher'
+            ppgTile.classList.add('wrong-tile')
         } 
 
-        // Check if apg is correct
-        if (selectedPlayer["APG"] > chosenPlayer["APG"]) {
-            apgTile.innerHTML = 'Lower'
-        } else if (selectedPlayer["APG"] === chosenPlayer["APG"]){
-            apgTile.innerHTML = 'Yes'
+        apgTile.innerHTML = `${selectedPlayer["APG"]}`
+        if (selectedPlayer["APG"] === chosenPlayer["APG"]) {
+            apgTile.classList.add('correct-tile')
+        } else if (selectedPlayer["APG"] > chosenPlayer["APG"] - partiallyCorrectRange && selectedPlayer["APG"] < chosenPlayer["APG"] + partiallyCorrectRange){
+            apgTile.classList.add('partially-correct-tile')
         } else {
-            apgTile.innerHTML = 'Higher'
-        }
+            apgTile.classList.add('wrong-tile')
+        } 
 
-        // Check if rpg is correct
-        if (selectedPlayer["RPG"] > chosenPlayer["RPG"]) {
-            rpgTile.innerHTML = 'Lower'
-        } else if (selectedPlayer["RPG"] === chosenPlayer["RPG"]){
-            rpgTile.innerHTML = 'Yes'
+        rpgTile.innerHTML = `${selectedPlayer["RPG"]}`
+        if (selectedPlayer["RPG"] === chosenPlayer["RPG"]) {
+            rpgTile.classList.add('correct-tile')
+        } else if (selectedPlayer["RPG"] > chosenPlayer["RPG"] - partiallyCorrectRange && selectedPlayer["RPG"] < chosenPlayer["RPG"] + partiallyCorrectRange){
+            rpgTile.classList.add('partially-correct-tile')
         } else {
-            rpgTile.innerHTML = 'Higher'
-        }
+            rpgTile.classList.add('wrong-tile')
+        } 
         
         if (selectedPlayer === chosenPlayer) {
             alert("You win!")
@@ -11097,8 +11321,7 @@ const checkIfCorrect = (element) => {
 
         guessCounter ++
 
-        // Lost after four guesses
-        if (guessCounter === maximumGuessesAllowed) 
+        if (guessCounter >= maximumGuessesAllowed) 
             alert("You lose :(")
     }
 }
@@ -11152,8 +11375,6 @@ inputBox.addEventListener("keyup", (event) => {
         searchWrapper.classList.remove('active')
     }
 })
-
-
 
 // Show instructions
 // -------------------------------------------------------------------------------------------
