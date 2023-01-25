@@ -11185,7 +11185,6 @@ for (let player of playerList) {
 // Set up counters
 let guessCounter = 0
 let maximumGuessesAllowed = 8
-let partiallyCorrectRange = 0.2
 let gameCount = 0
 let winCount = 0
 let winStreak = 0
@@ -11352,7 +11351,8 @@ const checkIfCorrect = (element) => {
         }
 
         const statRangePartiallyCorrect = (stat) => {
-            return selectedPlayer[stat] > chosenPlayer[stat] * (1 + partiallyCorrectRange) && selectedPlayer[stat] < chosenPlayer[stat] * (1 - partiallyCorrectRange)
+            let partiallyCorrectRange = 2
+            return selectedPlayer[stat] > chosenPlayer[stat] - partiallyCorrectRange && selectedPlayer[stat] < chosenPlayer[stat] + partiallyCorrectRange
         }
 
         // Fading logos
