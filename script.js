@@ -11032,163 +11032,171 @@ for (let player of playerList) {
         case 'Gol':
             player["CONF"] = './images/western-conference-logo.png'
             player["DIV"] = 'PAC'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-golden-state-warriors-logo-2020-300x300.png'
+            player["TEAM LOGO"] = './images/nba-golden-state-warriors-logo-2020-300x300.png'
             break
         case 'Dal':
             player["CONF"] = './images/western-conference-logo.png'
             player["DIV"] = 'SW'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-dallas-mavericks-logo-300x300.png'
+            player["TEAM LOGO"] = './images/nba-dallas-mavericks-logo-300x300.png'
             break
         case 'Phi':
             player["CONF"] = './images/eastern-conference-logo.png'
             player["DIV"] = 'ATL'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-philadelphia-76ers-logo-230x230.png'
+            player["TEAM LOGO"] = './images/images/nba-philadelphia-76ers-logo-300x300.png'
             break
         case 'Bos':
             player["CONF"] = './images/eastern-conference-logo.png'
             player["DIV"] = 'ATL'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-boston-celtics-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-boston-celtics-logo-300x300.png'
             break
         case 'Mil':
             player["CONF"] = './images/eastern-conference-logo.png'
             player["DIV"] = 'CTR'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-milwaukee-bucks-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-milwaukee-bucks-logo-300x300.png'
             break
         case 'Okc':
             player["CONF"] = './images/western-conference-logo.png'
             player["DIV"] = 'NW'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-oklahoma-city-thunder-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-oklahoma-city-thunder-logo-300x300.png'
             break
         case 'Lal':
             player["CONF"] = './images/western-conference-logo.png'
             player["DIV"] = 'PAC'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-los-angeles-lakers-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-los-angeles-lakers-logo-300x300.png'
             break
         case 'Bro':
             player["CONF"] = './images/eastern-conference-logo.png'
             player["DIV"] = 'ATL'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-brooklyn-nets-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-brooklyn-nets-logo-300x300.png'
             break
         case 'Por':
             player["CONF"] = './images/western-conference-logo.png'
             player["DIV"] = 'NW'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-portland-trail-blazers-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-portland-trail-blazers-logo-300x300.png'
             break
         case 'Cle':
             player["CONF"] = './images/eastern-conference-logo.png'
             player["DIV"] = 'CTR'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/Clevelan-Cavaliers-logo-2022-230x230.png'
+            player["TEAM LOGO"] = './images/nba-cleveland-cavaliers-logo-300x300.png'
             break
         case 'Mem':
             player["CONF"] = './images/western-conference-logo.png'
             player["DIV"] = 'SW'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-memphis-grizzlies-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-memphis-grizzlies-logo-300x300.png'
             break
         case 'Atl':
             player["CONF"] = './images/eastern-conference-logo.png'
             player["DIV"] = 'SE'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-atlanta-hawks-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-atlanta-hawks-logo-300x300.png'
             break
         case 'Pho':
             player["CONF"] = './images/western-conference-logo.png'
             player["DIV"] = 'PAC'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-phoenix-suns-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-phoenix-suns-logo-300x300.png'
             break
         case 'Chi':
             player["CONF"] = './images/eastern-conference-logo.png'
             player["DIV"] = 'CTR'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-chicago-bulls-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-chicago-bulls-logo-300x300.png'
             break
         case 'Nor':
             player["CONF"] = './images/western-conference-logo.png'
             player["DIV"] = 'SW'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-new-orleans-pelicans-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-new-orleans-pelicans-logo-300x300.png'
             break
         case 'Den':
             player["CONF"] = './images/western-conference-logo.png'
             player["DIV"] = 'NW'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-denver-nuggets-logo-2018-230x230.png'
+            player["TEAM LOGO"] = './images/nba-denver-nuggets-logo-2018-300x300.png'
             break
         case 'Tor':
             player["CONF"] = './images/eastern-conference-logo.png'
             player["DIV"] = 'ATL'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-toronto-raptors-logo-2020-230x230.png'
+            player["TEAM LOGO"] = './images/nba-toronto-raptors-logo-2020-300x300.png'
             break
         case 'Uta':
             player["CONF"] = './images/western-conference-logo.png'
             player["DIV"] = 'NW'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/utah-jazz-logo-2022-230x230.png'
+            player["TEAM LOGO"] = './images/utah-jazz-logo-2022-300x300.png'
             break
         case 'Nyk':
             player["CONF"] = './images/eastern-conference-logo.png'
             player["DIV"] = 'ATL'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-new-york-knicks-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-new-york-knicks-logo-300x300.png'
             break
         case 'Sac':
             player["CONF"] = './images/western-conference-logo.png'
             player["DIV"] = 'PAC'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-sacramento-kings-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-sacramento-kings-logo-300x300.png'
             break
         case 'Min':
             player["CONF"] = './images/western-conference-logo.png'
             player["DIV"] = 'NW'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-minnesota-timberwolves-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-minnesota-timberwolves-logo-300x300.png'
             break
         case 'Cha':
             player["CONF"] = './images/eastern-conference-logo.png'
             player["DIV"] = 'SE'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-charlotte-hornets-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-charlotte-hornets-logo-300x300.png'
             break
         case 'Lac':
             player["CONF"] = './images/western-conference-logo.png'
             player["DIV"] = 'PAC'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-la-clippers-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-la-clippers-logo-300x300.png'
             break
         case 'Was':
             player["CONF"] = './images/eastern-conference-logo.png'
             player["DIV"] = 'SE'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-washington-wizards-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-washington-wizards-logo-300x300.png'
             break
         case 'Mia':
-            player["CONF"] = './images/western-conference-logo.png'
-            player["DIV"] = 'PAC'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-miami-heat-logo-230x230.png'
+            player["CONF"] = './images/eastern-conference-logo.png'
+            player["DIV"] = 'SE'
+            player["TEAM LOGO"] = './images/nba-miami-heat-logo-300x300.png'
             break
         case 'Hou':
             player["CONF"] = './images/western-conference-logo.png'
-            player["DIV"] = 'PAC'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-houston-rockets-logo-2020-300x300.png'
+            player["DIV"] = 'SW'
+            player["TEAM LOGO"] = './images/nba-houston-rockets-logo-2020-300x300.png'
             break
         case 'San':
             player["CONF"] = './images/western-conference-logo.png'
             player["DIV"] = 'SW'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-san-antonio-spurs-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-san-antonio-spurs-logo-300x300.png'
             break
         case 'Det':
             player["CONF"] = './images/eastern-conference-logo.png'
             player["DIV"] = 'CTR'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-detroit-pistons-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-detroit-pistons-logo-300x300.png'
             break
         case 'Orl':
             player["CONF"] = './images/eastern-conference-logo.png'
             player["DIV"] = 'SE'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-orlando-magic-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-orlando-magic-logo-300x300.png'
             break
         case 'Ind':
             player["CONF"] = './images/eastern-conference-logo.png'
             player["DIV"] = 'CTR'
-            player["TEAM LOGO"] = 'https://loodibee.com/wp-content/uploads/nba-indiana-pacers-logo-230x230.png'
+            player["TEAM LOGO"] = './images/nba-indiana-pacers-logo-300x300.png'
             break
     }
 }
 
+// Set up counters
+let guessCounter = 0
+let maximumGuessesAllowed = 8
+let partiallyCorrectRange = 0.2
+let gameCount = 0
+let winCount = 0
+let winStreak = 0
+let maxWinStreak = 0
 
-// Completing guessing grid
+
+// Insert guessing grid
 // -------------------------------------------------------------------------------------------
-let numberOfGuessRows = 8
 
 let guessGrid = document.querySelector('.guess-grid')
-for (let i = 0; i < numberOfGuessRows; i++) {
+for (let i = 0; i < maximumGuessesAllowed; i++) {
     let guessRow = document.createElement('div')
     guessRow.classList.add('guess-row')
     let playerTile = document.createElement('div')
@@ -11226,6 +11234,52 @@ for (let i = 0; i < numberOfGuessRows; i++) {
     
     guessGrid.append(guessRow)
 }
+
+// Show how-to-play instructions
+// -------------------------------------------------------------------------------------------
+
+let howToPlayLink = document.querySelector('#how-to-play')
+let howToPlayOverlay = document.querySelector('.how-to-play')
+howToPlayLink.addEventListener('click', () => {
+    howToPlayOverlay.classList.add('active-overlay')
+})
+howToPlayOverlay.addEventListener('click', () => {
+    howToPlayOverlay.classList.remove('active-overlay')
+})
+
+// Show stats
+// -------------------------------------------------------------------------------------------
+const showStats = () => {
+    let gamesPlayed = document.querySelector('.games-played')
+    gamesPlayed.innerHTML = gameCount
+
+    let winPercentage = document.querySelector('.win-percentage')
+    if (gameCount === 0) {
+        winPercentage.innerHTML = `${0}%`
+    } else {
+        winPercentage.innerHTML = `${winCount / gameCount * 100}%`
+    }
+
+    let winStreakText = document.querySelector('.streak')
+    winStreakText.innerHTML = winStreak
+
+    let maxWinStreaktext = document.querySelector('.max-streak')
+    maxWinStreaktext.innerHTML = maxWinStreak
+
+    statsOverlay.classList.add('active-overlay')
+
+    statsOverlay.addEventListener('click', () => {
+        statsOverlay.classList.remove('active-overlay')
+    })
+}
+
+let statLink = document.querySelector('#stats')
+let statsOverlay = document.querySelector('.stats')
+statLink.addEventListener('click', () => {
+    showStats()
+})
+
+
 // Creating game logic
 // -------------------------------------------------------------------------------------------
 
@@ -11234,16 +11288,29 @@ let randIndex = parseInt(Math.random() * playerList.length)
 let chosenPlayer = playerList[randIndex]
 console.log(chosenPlayer)
 
-// Set up counters
-let guessCounter = 0
-let maximumGuessesAllowed = 8
-let partiallyCorrectRange = 2
+// Helper functions
+const showCorrectTile = (tile) => {
+    tile.classList.add('correct-tile')
+    tile.classList.add('animate__animated')
+    tile.classList.add('animate__flipInX')
+}
+
+const showPartiallyCorrectTile = (tile) => {
+    tile.classList.add('partially-correct-tile')
+    tile.classList.add('animate__animated')
+    tile.classList.add('animate__flipInX')
+}
+
+const showWrongTile = (tile) => {
+    tile.classList.add('wrong-tile')
+    tile.classList.add('animate__animated')
+    tile.classList.add('animate__flipInX')
+}
 
 const checkIfCorrect = (element) => {
     let selectedPlayerName = element.target.parentNode.dataset.name
     if (typeof selectedPlayerName !== "undefined") {
         let selectedPlayer = playerList.find(selectedPlayer => selectedPlayer["FULL NAME"] === selectedPlayerName)
-        console.log(selectedPlayer)
 
         let guessRows = document.querySelectorAll('.guess-row')
         let playerTile = guessRows[guessCounter].querySelector('.player-tile')
@@ -11258,74 +11325,140 @@ const checkIfCorrect = (element) => {
         playerTile.innerHTML = `${selectedPlayer["FULL NAME"]}`
 
         confTile.innerHTML = `<img class="tile-img" src="${selectedPlayer["CONF"]}">`
-        if (selectedPlayer["CONF"] === chosenPlayer["CONF"]) {
-            confTile.classList.add('correct-tile')
-        } else {
-            confTile.classList.add('wrong-tile')
-        }
+            if (selectedPlayer["CONF"] === chosenPlayer["CONF"]) {
+                showCorrectTile(confTile)
+            } else {
+                showWrongTile(confTile)
+            }
 
-        divTile.innerHTML = `${selectedPlayer["DIV"]}`
-        if (selectedPlayer["DIV"] === chosenPlayer["DIV"]) {
-            divTile.classList.add('correct-tile')
-        } else {
-            divTile.classList.add('wrong-tile')
-        }
+        setTimeout(() => {
+            divTile.innerHTML = `${selectedPlayer["DIV"]}`
+            if (selectedPlayer["DIV"] === chosenPlayer["DIV"]) {
+                showCorrectTile(divTile)
+            } else {
+                showWrongTile(divTile)
+            }
+        }, 200);
 
-        teamTile.innerHTML = `<img class="tile-img" src="${selectedPlayer["TEAM LOGO"]}">`
-        console.log(`<img class="tile-img" src="${selectedPlayer["TEAM LOGO"]}"`)
-        if (selectedPlayer["TEAM"] === chosenPlayer["TEAM"]) {
-            teamTile.classList.add('correct-tile')
-        } else {
-            teamTile.classList.add('wrong-tile')
-        }
+        setTimeout(() => {
+            teamTile.innerHTML = `<img class="tile-img" src="${selectedPlayer["TEAM LOGO"]}">`
+            if (selectedPlayer["TEAM"] === chosenPlayer["TEAM"]) {
+                
+            } else {
+                teamTile.classList.add('wrong-tile')
+                teamTile.classList.add('animate__animated')
+                teamTile.classList.add('animate__flipInX')
+            }
+        }, 400);
 
-        positionTile.innerHTML = `${selectedPlayer["POS"]}`
-        if (selectedPlayer["POS"] === chosenPlayer["POS"]) {
-            positionTile.classList.add('correct-tile')
-        } else if (chosenPlayer["POS"].includes(selectedPlayer["POS"]) || selectedPlayer["POS"].includes(chosenPlayer["POS"])) {
-            positionTile.classList.add('partially-correct-tile')
-        } else {
-            positionTile.classList.add('wrong-tile')
-        }
+        setTimeout(() => {
+            positionTile.innerHTML = `${selectedPlayer["POS"]}`
+            if (selectedPlayer["POS"] === chosenPlayer["POS"]) {
+                positionTile.classList.add('correct-tile')
+                positionTile.classList.add('animate__animated')
+                positionTile.classList.add('animate__flipInX')
+            } else if (chosenPlayer["POS"].includes(selectedPlayer["POS"]) || selectedPlayer["POS"].includes(chosenPlayer["POS"])) {
+                positionTile.classList.add('partially-correct-tile')
+                positionTile.classList.add('animate__animated')
+                positionTile.classList.add('animate__flipInX')
+            } else {
+                positionTile.classList.add('wrong-tile')
+                positionTile.classList.add('animate__animated')
+                positionTile.classList.add('animate__flipInX')
+            }
+        }, 600);
 
-        ppgTile.innerHTML = `${selectedPlayer["PPG"]}`
-        if (selectedPlayer["PPG"] === chosenPlayer["PPG"]) {
-            ppgTile.classList.add('correct-tile')
-        } else if (selectedPlayer["PPG"] > chosenPlayer["PPG"] - partiallyCorrectRange && selectedPlayer["PPG"] < chosenPlayer["PPG"] + partiallyCorrectRange){
-            ppgTile.classList.add('partially-correct-tile')
-        } else {
-            ppgTile.classList.add('wrong-tile')
-        } 
+        setTimeout(() => {
+            ppgTile.innerHTML = `${selectedPlayer["PPG"]}`
+            if (selectedPlayer["PPG"] === chosenPlayer["PPG"]) {
+                ppgTile.classList.add('correct-tile')
+                ppgTile.classList.add('animate__animated')
+                ppgTile.classList.add('animate__flipInX')
+            } else if (selectedPlayer["PPG"] > chosenPlayer["PPG"] - partiallyCorrectRange && selectedPlayer["PPG"] < chosenPlayer["PPG"] + partiallyCorrectRange){
+                ppgTile.classList.add('partially-correct-tile')
+                ppgTile.classList.add('animate__animated')
+                ppgTile.classList.add('animate__flipInX')
+            } else {
+                ppgTile.classList.add('wrong-tile')
+                ppgTile.classList.add('animate__animated')
+                ppgTile.classList.add('animate__flipInX')
+            } 
+        }, 800);
 
-        apgTile.innerHTML = `${selectedPlayer["APG"]}`
-        if (selectedPlayer["APG"] === chosenPlayer["APG"]) {
-            apgTile.classList.add('correct-tile')
-        } else if (selectedPlayer["APG"] > chosenPlayer["APG"] - partiallyCorrectRange && selectedPlayer["APG"] < chosenPlayer["APG"] + partiallyCorrectRange){
-            apgTile.classList.add('partially-correct-tile')
-        } else {
-            apgTile.classList.add('wrong-tile')
-        } 
+        setTimeout(() => {
+            apgTile.innerHTML = `${selectedPlayer["APG"]}`
+            if (selectedPlayer["APG"] === chosenPlayer["APG"]) {
+                apgTile.classList.add('correct-tile')
+                apgTile.classList.add('animate__animated')
+                apgTile.classList.add('animate__flipInX')
+            } else if (selectedPlayer["APG"] > chosenPlayer["APG"] - partiallyCorrectRange && selectedPlayer["APG"] < chosenPlayer["APG"] + partiallyCorrectRange){
+                apgTile.classList.add('partially-correct-tile')
+                apgTile.classList.add('animate__animated')
+                apgTile.classList.add('animate__flipInX')
+            } else {
+                apgTile.classList.add('wrong-tile')
+                apgTile.classList.add('animate__animated')
+                apgTile.classList.add('animate__flipInX')
+            } 
+        }, 1000);
 
-        rpgTile.innerHTML = `${selectedPlayer["RPG"]}`
-        if (selectedPlayer["RPG"] === chosenPlayer["RPG"]) {
-            rpgTile.classList.add('correct-tile')
-        } else if (selectedPlayer["RPG"] > chosenPlayer["RPG"] - partiallyCorrectRange && selectedPlayer["RPG"] < chosenPlayer["RPG"] + partiallyCorrectRange){
-            rpgTile.classList.add('partially-correct-tile')
-        } else {
-            rpgTile.classList.add('wrong-tile')
-        } 
+        setTimeout(() => {
+            rpgTile.innerHTML = `${selectedPlayer["RPG"]}`
+            if (selectedPlayer["RPG"] === chosenPlayer["RPG"]) {
+                rpgTile.classList.add('correct-tile')
+                rpgTile.classList.add('animate__animated')
+                rpgTile.classList.add('animate__flipInX')
+            } else if (selectedPlayer["RPG"] > chosenPlayer["RPG"] - partiallyCorrectRange && selectedPlayer["RPG"] < chosenPlayer["RPG"] + partiallyCorrectRange){
+                rpgTile.classList.add('partially-correct-tile')
+                rpgTile.classList.add('animate__animated')
+                rpgTile.classList.add('animate__flipInX')
+            } else {
+                rpgTile.classList.add('wrong-tile')
+                rpgTile.classList.add('animate__animated')
+                rpgTile.classList.add('animate__flipInX')
+            } 
+        }, 1200);
         
-        if (selectedPlayer === chosenPlayer) {
-            alert("You win!")
-        }
+        setTimeout(() => {
+            if (selectedPlayer === chosenPlayer) {
+                gameCount ++
+                winCount ++
+                winStreak ++
+                if (winStreak > maxWinStreak) 
+                    maxWinStreak = winStreak
 
-        guessCounter ++
+                let winOverlay = document.querySelector('.win')
+                winOverlay.classList.add('active-overlay')
 
-        if (guessCounter >= maximumGuessesAllowed) 
-            alert("You lose :(")
+                setTimeout(() => {
+                    winOverlay.classList.remove('active-overlay')
+                    showStats()
+                }, 3000)
+
+            }
+
+            if (guessCounter >= maximumGuessesAllowed) {
+                gameCount ++
+                winStreak = 0
+                if (winStreak > maxWinStreak) 
+                    maxWinStreak = winStreak
+
+                let loseOverlay = document.querySelector('.lose')
+                let playerAnswer = document.querySelector('.player-answer')
+                playerAnswer.innerHTML = `${chosenPlayer["FULL NAME"]}`
+                loseOverlay.classList.add('active-overlay')    
+
+                setTimeout(() => {
+                    loseOverlay.classList.remove('active-overlay')    
+                    showStats()
+                }, 3000)
+            }
+
+            guessCounter ++
+
+        }, 1400);
     }
 }
-
 
 // Building search bar functionality
 // -------------------------------------------------------------------------------------------
@@ -11376,16 +11509,5 @@ inputBox.addEventListener("keyup", (event) => {
     }
 })
 
-// Show instructions
-// -------------------------------------------------------------------------------------------
-
-let howToPlayLink = document.querySelector('#how-to-play')
-let overlayText = document.querySelector('.overlay')
-howToPlayLink.addEventListener('click', () => {
-    overlayText.classList.add('active')
-})
-overlayText.addEventListener('click', () => {
-    overlayText.classList.remove('active')
-})
 
 
