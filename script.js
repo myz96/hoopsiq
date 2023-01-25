@@ -11042,7 +11042,7 @@ for (let player of playerList) {
         case 'Phi':
             player["CONF"] = './images/eastern-conference-logo.png'
             player["DIV"] = 'ATL'
-            player["TEAM LOGO"] = './images/images/nba-philadelphia-76ers-logo-300x300.png'
+            player["TEAM LOGO"] = './images/nba-philadelphia-76ers-logo-300x300.png'
             break
         case 'Bos':
             player["CONF"] = './images/eastern-conference-logo.png'
@@ -11235,6 +11235,29 @@ for (let i = 0; i < maximumGuessesAllowed; i++) {
     guessGrid.append(guessRow)
 }
 
+// Insert team logos
+// -------------------------------------------------------------------------------------------
+let nbaTeams = []
+for (let player of playerList) {
+    let team = {}
+    team.conference = player["CONF"]
+    team.div = player["DIV"]
+    team.team = player["TEAM"]
+    team["TEAM LOGO"] = player["TEAM LOGO"]
+    nbaTeams.push(team)
+}
+// Creating unique array of all nba teams containing their team, team logo, div and conference
+nbaTeams = [...new Map(nbaTeams.map((obj) => [obj["team"], obj])).values()]
+for (let team of nbaTeams) {
+    let teamGrid = document.querySelector('.team-grid')
+    let teamLogo = document.createElement('img')
+    teamLogo.classList.add(`${team.team}`)
+    teamLogo.classList.add(`${team.div}`)
+    teamLogo.classList.add(`${team.conference}`)
+    teamLogo.src = `${team["TEAM LOGO"]}`
+    teamGrid.append(teamLogo)
+}
+
 // Show how-to-play instructions
 // -------------------------------------------------------------------------------------------
 
@@ -11325,25 +11348,43 @@ const checkIfCorrect = (element) => {
         playerTile.innerHTML = `${selectedPlayer["FULL NAME"]}`
 
         const statEquivalent = (stat) => {
-            selectedPlayer[stat] === chosenPlayer[stat]
+            return selectedPlayer[stat] === chosenPlayer[stat]
         }
 
         const statRangePartiallyCorrect = (stat) => {
-            selectedPlayer[stat] > chosenPlayer[stat] * (1 + partiallyCorrectRange) && selectedPlayer[stat] < chosenPlayer[stat] * (1 - partiallyCorrectRange)
+            return selectedPlayer[stat] > chosenPlayer[stat] * (1 + partiallyCorrectRange) && selectedPlayer[stat] < chosenPlayer[stat] * (1 - partiallyCorrectRange)
         }
 
+        // Fading logos
+        let teamLogos = document.querySelectorAll(`.team-grid>img`)
+        
         confTile.innerHTML = `<img class="tile-img" src="${selectedPlayer["CONF"]}">`
-            if (statEquivalent("CONF")) {
-                showCorrectTile(confTile)
-            } else {
-                showWrongTile(confTile)
-            }
+        let correctConference = chosenPlayer["CONF"]
+        for (let team of teamLogos) {
+            if (!team.classList.contains(correctConference)) 
+                team.classList.add('wrong-team')
+        }
+        if (statEquivalent("CONF")) {
+            showCorrectTile(confTile)
+        } else {
+            showWrongTile(confTile)
+        }
 
         setTimeout(() => {
             divTile.innerHTML = `${selectedPlayer["DIV"]}`
             if (statEquivalent("DIV")) {
+                let correctDiv = chosenPlayer["DIV"]
+                for (let team of teamLogos) {
+                    if (!team.classList.contains(correctDiv)) 
+                        team.classList.add('wrong-team')
+                }
                 showCorrectTile(divTile)
             } else {
+                let wrongDiv = selectedPlayer["DIV"]
+                for (let team of teamLogos) {
+                    if (team.classList.contains(wrongDiv)) 
+                        team.classList.add('wrong-team')
+                }
                 showWrongTile(divTile)
             }
         }, 200);
@@ -11351,8 +11392,18 @@ const checkIfCorrect = (element) => {
         setTimeout(() => {
             teamTile.innerHTML = `<img class="tile-img" src="${selectedPlayer["TEAM LOGO"]}">`
             if (statEquivalent("TEAM LOGO")) {
+                let correctTeam = chosenPlayer["TEAM"]
+                for (let team of teamLogos) {
+                    if (!team.classList.contains(correctTeam)) 
+                        team.classList.add('wrong-team')
+                }
                 showCorrectTile(teamTile)
             } else {
+                let wrongTeam = selectedPlayer["TEAM"]
+                for (let team of teamLogos) {
+                    if (team.classList.contains(wrongTeam)) 
+                        team.classList.add('wrong-team')
+                }
                 showWrongTile(teamTile)
             }
         }, 400);
