@@ -11288,7 +11288,7 @@ let randIndex = parseInt(Math.random() * playerList.length)
 let chosenPlayer = playerList[randIndex]
 console.log(chosenPlayer)
 
-// Helper functions
+// Change tile color
 const showCorrectTile = (tile) => {
     tile.classList.add('correct-tile')
     tile.classList.add('animate__animated')
@@ -11324,8 +11324,16 @@ const checkIfCorrect = (element) => {
 
         playerTile.innerHTML = `${selectedPlayer["FULL NAME"]}`
 
+        const statEquivalent = (stat) => {
+            selectedPlayer[stat] === chosenPlayer[stat]
+        }
+
+        const statRangePartiallyCorrect = (stat) => {
+            selectedPlayer[stat] > chosenPlayer[stat] * (1 + partiallyCorrectRange) && selectedPlayer[stat] < chosenPlayer[stat] * (1 - partiallyCorrectRange)
+        }
+
         confTile.innerHTML = `<img class="tile-img" src="${selectedPlayer["CONF"]}">`
-            if (selectedPlayer["CONF"] === chosenPlayer["CONF"]) {
+            if (statEquivalent("CONF")) {
                 showCorrectTile(confTile)
             } else {
                 showWrongTile(confTile)
@@ -11333,7 +11341,7 @@ const checkIfCorrect = (element) => {
 
         setTimeout(() => {
             divTile.innerHTML = `${selectedPlayer["DIV"]}`
-            if (selectedPlayer["DIV"] === chosenPlayer["DIV"]) {
+            if (statEquivalent("DIV")) {
                 showCorrectTile(divTile)
             } else {
                 showWrongTile(divTile)
@@ -11342,85 +11350,60 @@ const checkIfCorrect = (element) => {
 
         setTimeout(() => {
             teamTile.innerHTML = `<img class="tile-img" src="${selectedPlayer["TEAM LOGO"]}">`
-            if (selectedPlayer["TEAM"] === chosenPlayer["TEAM"]) {
-                
+            if (statEquivalent("TEAM LOGO")) {
+                showCorrectTile(teamTile)
             } else {
-                teamTile.classList.add('wrong-tile')
-                teamTile.classList.add('animate__animated')
-                teamTile.classList.add('animate__flipInX')
+                showWrongTile(teamTile)
             }
         }, 400);
 
         setTimeout(() => {
             positionTile.innerHTML = `${selectedPlayer["POS"]}`
-            if (selectedPlayer["POS"] === chosenPlayer["POS"]) {
-                positionTile.classList.add('correct-tile')
-                positionTile.classList.add('animate__animated')
-                positionTile.classList.add('animate__flipInX')
+            if (statEquivalent("POS")) {
+                showCorrectTile(positionTile)
             } else if (chosenPlayer["POS"].includes(selectedPlayer["POS"]) || selectedPlayer["POS"].includes(chosenPlayer["POS"])) {
-                positionTile.classList.add('partially-correct-tile')
-                positionTile.classList.add('animate__animated')
-                positionTile.classList.add('animate__flipInX')
+                showPartiallyCorrectTile(positionTile)
             } else {
-                positionTile.classList.add('wrong-tile')
-                positionTile.classList.add('animate__animated')
-                positionTile.classList.add('animate__flipInX')
+                showWrongTile(positionTile)
             }
         }, 600);
 
         setTimeout(() => {
             ppgTile.innerHTML = `${selectedPlayer["PPG"]}`
-            if (selectedPlayer["PPG"] === chosenPlayer["PPG"]) {
-                ppgTile.classList.add('correct-tile')
-                ppgTile.classList.add('animate__animated')
-                ppgTile.classList.add('animate__flipInX')
-            } else if (selectedPlayer["PPG"] > chosenPlayer["PPG"] - partiallyCorrectRange && selectedPlayer["PPG"] < chosenPlayer["PPG"] + partiallyCorrectRange){
-                ppgTile.classList.add('partially-correct-tile')
-                ppgTile.classList.add('animate__animated')
-                ppgTile.classList.add('animate__flipInX')
+            if (statEquivalent("PPG")) {
+                showCorrectTile(ppgTile)
+            } else if (statRangePartiallyCorrect("PPG")){
+                showPartiallyCorrectTile(ppgTile)
             } else {
-                ppgTile.classList.add('wrong-tile')
-                ppgTile.classList.add('animate__animated')
-                ppgTile.classList.add('animate__flipInX')
+                showWrongTile(ppgTile)
             } 
         }, 800);
 
         setTimeout(() => {
             apgTile.innerHTML = `${selectedPlayer["APG"]}`
-            if (selectedPlayer["APG"] === chosenPlayer["APG"]) {
-                apgTile.classList.add('correct-tile')
-                apgTile.classList.add('animate__animated')
-                apgTile.classList.add('animate__flipInX')
-            } else if (selectedPlayer["APG"] > chosenPlayer["APG"] - partiallyCorrectRange && selectedPlayer["APG"] < chosenPlayer["APG"] + partiallyCorrectRange){
-                apgTile.classList.add('partially-correct-tile')
-                apgTile.classList.add('animate__animated')
-                apgTile.classList.add('animate__flipInX')
+            if (statEquivalent("APG")) {
+                showCorrectTile(apgTile)
+            } else if (statRangePartiallyCorrect("APG")){
+                showPartiallyCorrectTile(apgTile)
             } else {
-                apgTile.classList.add('wrong-tile')
-                apgTile.classList.add('animate__animated')
-                apgTile.classList.add('animate__flipInX')
+                showWrongTile(apgTile)
             } 
         }, 1000);
 
         setTimeout(() => {
             rpgTile.innerHTML = `${selectedPlayer["RPG"]}`
-            if (selectedPlayer["RPG"] === chosenPlayer["RPG"]) {
-                rpgTile.classList.add('correct-tile')
-                rpgTile.classList.add('animate__animated')
-                rpgTile.classList.add('animate__flipInX')
-            } else if (selectedPlayer["RPG"] > chosenPlayer["RPG"] - partiallyCorrectRange && selectedPlayer["RPG"] < chosenPlayer["RPG"] + partiallyCorrectRange){
-                rpgTile.classList.add('partially-correct-tile')
-                rpgTile.classList.add('animate__animated')
-                rpgTile.classList.add('animate__flipInX')
+            if (statEquivalent("RPG")) {
+                showCorrectTile(rpgTile)
+            } else if (statRangePartiallyCorrect("RPG")){
+                showPartiallyCorrectTile(rpgTile)
             } else {
-                rpgTile.classList.add('wrong-tile')
-                rpgTile.classList.add('animate__animated')
-                rpgTile.classList.add('animate__flipInX')
+                showWrongTile(rpgTile)
             } 
         }, 1200);
         
         setTimeout(() => {
-            if (selectedPlayer === chosenPlayer) {
+            let winCondition = selectedPlayer === chosenPlayer
+            if (winCondition) {
                 gameCount ++
                 winCount ++
                 winStreak ++
@@ -11437,7 +11420,8 @@ const checkIfCorrect = (element) => {
 
             }
 
-            if (guessCounter >= maximumGuessesAllowed) {
+            let loseCondition = guessCounter >= maximumGuessesAllowed
+            if (loseCondition) {
                 gameCount ++
                 winStreak = 0
                 if (winStreak > maxWinStreak) 
