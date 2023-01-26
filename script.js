@@ -11251,16 +11251,34 @@ for (let player of playerList) {
     team["TEAM LOGO"] = player["TEAM LOGO"]
     nbaTeams.push(team)
 }
+
 // Creating unique array of all nba teams containing their team, team logo, div and conference
 nbaTeams = [...new Map(nbaTeams.map((obj) => [obj["team"], obj])).values()]
 for (let team of nbaTeams) {
     let teamGrid = document.querySelector('.team-grid')
+    let teamLogoContainer = document.createElement('div')
+    teamLogoContainer.classList.add('team-logo-container')
+
     let teamLogo = document.createElement('img')
     teamLogo.classList.add(`${team.team}`)
     teamLogo.classList.add(`${team.div}`)
     teamLogo.classList.add(`${team.conference}`)
     teamLogo.src = `${team["TEAM LOGO"]}`
-    teamGrid.append(teamLogo)
+    teamLogoContainer.append(teamLogo)
+    
+    let teamTooltip = document.createElement('div')
+    teamTooltip.classList.add('tool-tip')
+    // Find team members for each nba team
+    for (let player of playerList) {
+        if (player["TEAM"] === team.team) {
+            let teamMember = document.createElement('p')
+            teamMember.innerHTML = `${player["FULL NAME"]} ${player["POS"]}`
+            teamTooltip.append(teamMember)
+        }
+    }
+
+    teamLogoContainer.append(teamTooltip)
+    teamGrid.append(teamLogoContainer)
 }
 
 // Show how-to-play instructions

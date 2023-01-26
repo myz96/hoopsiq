@@ -15,7 +15,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 50px auto 100px auto;
-    /* max-width: 1400px; */
+    max-width: 2000px;
 }
 
 .main-section-lhs {
@@ -185,18 +185,73 @@ footer img {
 /* Team Grid */
 /* ----------------------------------------------------------------------------------------- */
 .team-grid {
-    flex: row wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     margin: auto;
 }
 
-.team-grid > img {
+.team-logo-container > img {
     width: 80px;
     height: 80px;
     margin: 5px;
     transition-property: all;
     transition-duration: 1s;
 }
+
+/* Tooltip tutorial here https://www.w3schools.com/css/css_tooltip.asp */
+.team-logo-container {
+    position: relative;
+}
+
+.team-logo-container .tool-tip {
+    visibility: hidden;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    transform: translateX(55%) translateY(-70%);
+   
+    /* Position the tooltip text - see examples below! */
+    position: fixed;
+    z-index: 1;
+
+    display: 
+}
+
+.tool-tip p {
+    margin: 0;
+}
+
+.team-logo-container:hover .tool-tip {
+    visibility: visible;
+}
+
+/* .team-logo-container:hover::before {
+    transform: translateX(-50%) translateY(-100%) scale(1);
+} */
+
+/* .team-logo-container .tool-tip::before,
+.team-logo-container .tool-tip::after {
+    position: absolute;
+    top: -.25rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%) scale(0);
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.team-logo-container .tool-tip::before {
+    color: white;
+    padding: .5rem;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    border-radius: .3rem;
+} */
+
+
 
 .wrong-team {
     filter: brightness(10%);
