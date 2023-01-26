@@ -11183,13 +11183,19 @@ for (let player of playerList) {
 }
 
 // Set up counters
-let guessCounter = 0
 let maximumGuessesAllowed = 8
-let gameCount = 0
-let winCount = 0
-let winStreak = 0
-let maxWinStreak = 0
+let guessCounter = 0
 
+// Store game data in cache
+let cachedScores = JSON.parse(localStorage.getItem("cachedScores"))
+console.log(cachedScores)
+let scoreCounters = {}
+if (cachedScores) {
+    scoreCounters = {gameCount: cachedScores.gameCount, winCount: cachedScores.winCount, winStreak: cachedScores.winStreak, maxWinStreak: cachedScores.maxWinStreak}
+} else {
+    scoreCounters = {gameCount: 0, winCount: 0, winStreak: 0, maxWinStreak: 0}
+}
+console.log(scoreCounters)
 
 // Insert guessing grid
 // -------------------------------------------------------------------------------------------
@@ -11273,20 +11279,20 @@ howToPlayOverlay.addEventListener('click', () => {
 // -------------------------------------------------------------------------------------------
 const showStats = () => {
     let gamesPlayed = document.querySelector('.games-played')
-    gamesPlayed.innerHTML = gameCount
+    gamesPlayed.innerHTML = scoreCounters.gameCount
 
     let winPercentage = document.querySelector('.win-percentage')
-    if (gameCount === 0) {
+    if (scoreCounters.gameCount === 0) {
         winPercentage.innerHTML = `${0}%`
     } else {
-        winPercentage.innerHTML = `${winCount / gameCount * 100}%`
+        winPercentage.innerHTML = `${scoreCounters.winCount / scoreCounters.gameCount * 100}%`
     }
 
     let winStreakText = document.querySelector('.streak')
-    winStreakText.innerHTML = winStreak
+    winStreakText.innerHTML = scoreCounters.winStreak
 
     let maxWinStreaktext = document.querySelector('.max-streak')
-    maxWinStreaktext.innerHTML = maxWinStreak
+    maxWinStreaktext.innerHTML = scoreCounters.maxWinStreak
 
     statsOverlay.classList.add('active-overlay')
 
@@ -11452,44 +11458,56 @@ const checkIfCorrect = (element) => {
             } 
         }, 1200);
         
+        guessCounter ++
+
         setTimeout(() => {
             let winCondition = selectedPlayer === chosenPlayer
             if (winCondition) {
-                gameCount ++
-                winCount ++
-                winStreak ++
-                if (winStreak > maxWinStreak) 
-                    maxWinStreak = winStreak
+                scoreCounters.gameCount ++
+                scoreCounters.winCount ++
+                scoreCounters.winStreak ++
+                if (scoreCounters.winStreak > scoreCounters.maxWinStreak) 
+                    scoreCounters.maxWinStreak = scoreCounters.winStreak
 
                 let winOverlay = document.querySelector('.win')
                 winOverlay.classList.add('active-overlay')
+
+                // Save data to cache
+                localStorage.setItem("cachedScores", JSON.stringify(scoreCounters))
+                console.log(JSON.parse(localStorage.getItem("cachedScores")))
 
                 setTimeout(() => {
                     winOverlay.classList.remove('active-overlay')
                     showStats()
                 }, 3000)
 
+
             }
 
-            let loseCondition = guessCounter >= maximumGuessesAllowed
+            let loseCondition = guessCounter === maximumGuessesAllowed
             if (loseCondition) {
-                gameCount ++
-                winStreak = 0
-                if (winStreak > maxWinStreak) 
-                    maxWinStreak = winStreak
+                scoreCounters.gameCount ++
+                scoreCounters.winStreak = 0
+                if (scoreCounters.winStreak > scoreCounters.maxWinStreak) 
+                    scoreCounters.maxWinStreak = scoreCounters.winStreak
 
                 let loseOverlay = document.querySelector('.lose')
                 let playerAnswer = document.querySelector('.player-answer')
                 playerAnswer.innerHTML = `${chosenPlayer["FULL NAME"]}`
                 loseOverlay.classList.add('active-overlay')    
 
+                // Save data to cache
+                localStorage.setItem("cachedScores", JSON.stringify(scoreCounters))
+                console.log(JSON.parse(localStorage.getItem("cachedScores")))
+                
                 setTimeout(() => {
                     loseOverlay.classList.remove('active-overlay')    
                     showStats()
                 }, 3000)
+
+
             }
 
-            guessCounter ++
 
         }, 1400);
     }
@@ -11521,16 +11539,15 @@ const autoComplete = (element) => {
 
 // Filter players based on user input
 inputBox.addEventListener("keyup", (event) => {
-    let userInput = event.target.value
+    let userInput = event.target.value.trim()
     let resultsArr = []
     if (userInput) {
         resultsArr = playerList.filter((player) => {
-            return player["FULL NAME"].toLowerCase().startsWith(userInput.toLowerCase())
+            return player["FULL NAME"].toLowerCase().includes(userInput.toLowerCase())
         })
         resultsArr = resultsArr.map((player) => {
             return player = `<li data-name = "${player["FULL NAME"]}"><span class = "player-name">${player["FULL NAME"]}</span><span class = "player-info">${player["TEAM"].toLocaleUpperCase()} ${player["POS"]} PPG: ${player["PPG"]} APG: ${player["APG"]} RPG: ${player["RPG"]}</span></li>`
         })
-        // console.log(resultsArr)
         searchWrapper.classList.add('active')
         showResults(resultsArr)
         // Choose player that is selected
