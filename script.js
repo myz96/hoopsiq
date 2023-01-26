@@ -11282,7 +11282,10 @@ const createLogoGrid = () => {
                 teamTooltip.append(teamMember)
             }
         }
-    
+        teamTooltip.addEventListener('click', (e) => {
+            e.target.style.visibility = 'hidden'
+        })
+
         teamLogoContainer.append(teamTooltip)
         teamGrid.append(teamLogoContainer)
     }

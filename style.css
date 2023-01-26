@@ -509,4 +509,9 @@ footer img {
     .team-logo-container:hover .tool-tip {
         visibility: visible;
     }
+
+    .active-overlay {
+        visibility: visible;
+        z-index: 2;
+    }
 }
