@@ -499,13 +499,11 @@ footer img {
        
         /* Position the tooltip text - see examples below! */
         z-index: 1;
-        
-        font-size: 0.8rem;
-    }
+        }
     
     .tool-tip p {
         margin: 0;
-        font-size: 0.8rem
+        font-size: 0.6rem
     }
     
     .team-logo-container:hover .tool-tip {
