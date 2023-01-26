@@ -376,7 +376,7 @@ footer img {
 
 /* Mobile compatible */
 /* ----------------------------------------------------------------------------------------- */
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1400px) {
     * {
         font-size: 1rem;
     }
