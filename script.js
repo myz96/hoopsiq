@@ -11201,44 +11201,49 @@ console.log(scoreCounters)
 // -------------------------------------------------------------------------------------------
 
 let guessGrid = document.querySelector('.guess-grid')
-for (let i = 0; i < maximumGuessesAllowed; i++) {
-    let guessRow = document.createElement('div')
-    guessRow.classList.add('guess-row')
-    let playerTile = document.createElement('div')
-    playerTile.classList.add('player-tile')
-    let confTile = document.createElement('div')
-    confTile.classList.add('guess-tile')
-    confTile.classList.add('conf-tile')
-    let divTile = document.createElement('div')
-    divTile.classList.add('guess-tile')
-    divTile.classList.add('div-tile')
-    let teamTile = document.createElement('div')
-    teamTile.classList.add('guess-tile')
-    teamTile.classList.add('team-tile')
-    let positionTile = document.createElement('div')
-    positionTile.classList.add('guess-tile')
-    positionTile.classList.add('position-tile')
-    let ppgTile = document.createElement('div')
-    ppgTile.classList.add('guess-tile')
-    ppgTile.classList.add('ppg-tile')
-    let apgTile = document.createElement('div')
-    apgTile.classList.add('guess-tile')
-    apgTile.classList.add('apg-tile')
-    let rpgTile = document.createElement('div')
-    rpgTile.classList.add('guess-tile')
-    rpgTile.classList.add('rpg-tile')
 
-    guessRow.append(playerTile)
-    guessRow.append(confTile)
-    guessRow.append(divTile)
-    guessRow.append(teamTile)
-    guessRow.append(positionTile)
-    guessRow.append(ppgTile)
-    guessRow.append(apgTile)
-    guessRow.append(rpgTile)
+const createGameGrid = () => {
+    for (let i = 0; i < maximumGuessesAllowed; i++) {
+        let guessRow = document.createElement('div')
+        guessRow.classList.add('guess-row')
+        let playerTile = document.createElement('div')
+        playerTile.classList.add('player-tile')
+        let confTile = document.createElement('div')
+        confTile.classList.add('guess-tile')
+        confTile.classList.add('conf-tile')
+        let divTile = document.createElement('div')
+        divTile.classList.add('guess-tile')
+        divTile.classList.add('div-tile')
+        let teamTile = document.createElement('div')
+        teamTile.classList.add('guess-tile')
+        teamTile.classList.add('team-tile')
+        let positionTile = document.createElement('div')
+        positionTile.classList.add('guess-tile')
+        positionTile.classList.add('position-tile')
+        let ppgTile = document.createElement('div')
+        ppgTile.classList.add('guess-tile')
+        ppgTile.classList.add('ppg-tile')
+        let apgTile = document.createElement('div')
+        apgTile.classList.add('guess-tile')
+        apgTile.classList.add('apg-tile')
+        let rpgTile = document.createElement('div')
+        rpgTile.classList.add('guess-tile')
+        rpgTile.classList.add('rpg-tile')
     
-    guessGrid.append(guessRow)
+        guessRow.append(playerTile)
+        guessRow.append(confTile)
+        guessRow.append(divTile)
+        guessRow.append(teamTile)
+        guessRow.append(positionTile)
+        guessRow.append(ppgTile)
+        guessRow.append(apgTile)
+        guessRow.append(rpgTile)
+        
+        guessGrid.append(guessRow)
+    }
 }
+
+createGameGrid()
 
 // Insert team logos
 // -------------------------------------------------------------------------------------------
@@ -11254,32 +11259,36 @@ for (let player of playerList) {
 
 // Creating unique array of all nba teams containing their team, team logo, div and conference
 nbaTeams = [...new Map(nbaTeams.map((obj) => [obj["team"], obj])).values()]
-for (let team of nbaTeams) {
-    let teamGrid = document.querySelector('.team-grid')
-    let teamLogoContainer = document.createElement('div')
-    teamLogoContainer.classList.add('team-logo-container')
-
-    let teamLogo = document.createElement('img')
-    teamLogo.classList.add(`${team.team}`)
-    teamLogo.classList.add(`${team.div}`)
-    teamLogo.classList.add(`${team.conference}`)
-    teamLogo.src = `${team["TEAM LOGO"]}`
-    teamLogoContainer.append(teamLogo)
+const createLogoGrid = () => {
+    for (let team of nbaTeams) {
+        let teamGrid = document.querySelector('.team-grid')
+        let teamLogoContainer = document.createElement('div')
+        teamLogoContainer.classList.add('team-logo-container')
     
-    let teamTooltip = document.createElement('div')
-    teamTooltip.classList.add('tool-tip')
-    // Find team members for each nba team
-    for (let player of playerList) {
-        if (player["TEAM"] === team.team) {
-            let teamMember = document.createElement('p')
-            teamMember.innerHTML = `${player["FULL NAME"]} ${player["POS"]}`
-            teamTooltip.append(teamMember)
+        let teamLogo = document.createElement('img')
+        teamLogo.classList.add(`${team.team}`)
+        teamLogo.classList.add(`${team.div}`)
+        teamLogo.classList.add(`${team.conference}`)
+        teamLogo.src = `${team["TEAM LOGO"]}`
+        teamLogoContainer.append(teamLogo)
+        
+        let teamTooltip = document.createElement('div')
+        teamTooltip.classList.add('tool-tip')
+        // Find team members for each nba team
+        for (let player of playerList) {
+            if (player["TEAM"] === team.team) {
+                let teamMember = document.createElement('p')
+                teamMember.innerHTML = `${player["FULL NAME"]} ${player["POS"]}`
+                teamTooltip.append(teamMember)
+            }
         }
+    
+        teamLogoContainer.append(teamTooltip)
+        teamGrid.append(teamLogoContainer)
     }
-
-    teamLogoContainer.append(teamTooltip)
-    teamGrid.append(teamLogoContainer)
 }
+
+createLogoGrid()
 
 // Show how-to-play instructions
 // -------------------------------------------------------------------------------------------
@@ -11303,7 +11312,7 @@ const showStats = () => {
     if (scoreCounters.gameCount === 0) {
         winPercentage.innerHTML = `${0}%`
     } else {
-        winPercentage.innerHTML = `${scoreCounters.winCount / scoreCounters.gameCount * 100}%`
+        winPercentage.innerHTML = `${Math.round(scoreCounters.winCount / scoreCounters.gameCount * 100)}%`
     }
 
     let winStreakText = document.querySelector('.streak')
@@ -11380,7 +11389,7 @@ const checkIfCorrect = (element) => {
         }
 
         // Fading logos
-        let teamLogos = document.querySelectorAll(`.team-grid>img`)
+        let teamLogos = document.querySelectorAll(`.team-logo-container>img`)
         
         confTile.innerHTML = `<img class="tile-img" src="${selectedPlayer["CONF"]}">`
         let correctConference = chosenPlayer["CONF"]
@@ -11479,6 +11488,26 @@ const checkIfCorrect = (element) => {
         guessCounter ++
 
         setTimeout(() => {
+            const resetGame = () => {
+                let gameTiles = document.querySelectorAll('.guess-row')
+                for (let gameTile of gameTiles) {
+                    gameTile.remove()
+                }
+                let teamLogos = document.querySelectorAll('.team-grid>*')
+                for (let teamLogo of teamLogos) {
+                    teamLogo.remove()
+                }
+                let searchInput = document.querySelector('input')
+                searchInput.value = ''
+                let searchResults = document.querySelector('.search-input')
+                searchResults.classList.remove('active')
+
+                createGameGrid()
+                createLogoGrid()
+
+                guessCounter = 0
+            }
+            
             let winCondition = selectedPlayer === chosenPlayer
             if (winCondition) {
                 scoreCounters.gameCount ++
@@ -11497,6 +11526,7 @@ const checkIfCorrect = (element) => {
                 setTimeout(() => {
                     winOverlay.classList.remove('active-overlay')
                     showStats()
+                    resetGame()
                 }, 3000)
 
 
@@ -11521,12 +11551,11 @@ const checkIfCorrect = (element) => {
                 setTimeout(() => {
                     loseOverlay.classList.remove('active-overlay')    
                     showStats()
+                    resetGame()
                 }, 3000)
 
 
             }
-
-
         }, 1400);
     }
 }
@@ -11555,6 +11584,14 @@ const autoComplete = (element) => {
         inputBox.value = selectedPlayer
 }
 
+// Reset search bar
+const resetSearch = () => {
+    let searchInput = document.querySelector('input')
+    searchInput.value = ''
+    let searchResults = document.querySelector('.search-input')
+    searchResults.classList.remove('active')
+}
+
 // Filter players based on user input
 inputBox.addEventListener("keyup", (event) => {
     let userInput = event.target.value.trim()
@@ -11573,6 +11610,7 @@ inputBox.addEventListener("keyup", (event) => {
         for (let result of searchList) {
             result.addEventListener('click', autoComplete)
             result.addEventListener('click', checkIfCorrect)
+            result.addEventListener('click', resetSearch)
         }
     } else {
         searchWrapper.classList.remove('active')
