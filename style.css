@@ -431,7 +431,8 @@ footer img {
     }
 
     .header-row {
-        width: 95vw;
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
     }
 
     .guess-row {

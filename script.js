@@ -11505,6 +11505,9 @@ const checkIfCorrect = (element) => {
                 let searchResults = document.querySelector('.search-input')
                 searchResults.classList.remove('active')
 
+                let randIndex = parseInt(Math.random() * playerList.length)
+                chosenPlayer = playerList[randIndex]
+
                 createGameGrid()
                 createLogoGrid()
 
@@ -11512,6 +11515,7 @@ const checkIfCorrect = (element) => {
             }
             
             let winCondition = selectedPlayer === chosenPlayer
+            let loseCondition = guessCounter === maximumGuessesAllowed
             if (winCondition) {
                 scoreCounters.gameCount ++
                 scoreCounters.winCount ++
@@ -11531,12 +11535,7 @@ const checkIfCorrect = (element) => {
                     showStats()
                     resetGame()
                 }, 3000)
-
-
-            }
-
-            let loseCondition = guessCounter === maximumGuessesAllowed
-            if (loseCondition) {
+            } else if (loseCondition) {
                 scoreCounters.gameCount ++
                 scoreCounters.winStreak = 0
                 if (scoreCounters.winStreak > scoreCounters.maxWinStreak) 
@@ -11556,8 +11555,6 @@ const checkIfCorrect = (element) => {
                     showStats()
                     resetGame()
                 }, 3000)
-
-
             }
         }, 1400);
     }
