@@ -11183,7 +11183,7 @@ for (let player of playerList) {
 }
 
 // Set up counters
-let maximumGuessesAllowed = 8
+let maximumGuessesAllowed = 6
 let guessCounter = 0
 
 // Store game data in cache
@@ -11263,17 +11263,29 @@ const createLogoGrid = () => {
     for (let team of nbaTeams) {
         let teamGrid = document.querySelector('.team-grid')
         let teamLogoContainer = document.createElement('div')
-        teamLogoContainer.classList.add('team-logo-container')
-    
         let teamLogo = document.createElement('img')
+        let teamTooltipContainer = document.createElement('div')
+        let teamTooltip = document.createElement('div')
+
+        teamLogoContainer.classList.add('team-logo-container')    
         teamLogo.classList.add(`${team.team}`)
         teamLogo.classList.add(`${team.div}`)
         teamLogo.classList.add(`${team.conference}`)
         teamLogo.src = `${team["TEAM LOGO"]}`
         teamLogoContainer.append(teamLogo)
         
-        let teamTooltip = document.createElement('div')
-        teamTooltip.classList.add('tool-tip')
+        teamTooltipContainer.classList.add('overlay')
+        teamTooltip.classList.add('textbox')
+        teamTooltip.classList.add('tooltip')
+
+        teamLogoContainer.addEventListener('click', () => {
+            teamTooltipContainer.classList.add('active-overlay')
+        })
+        teamTooltipContainer.addEventListener('click', (e) => {
+            e.stopPropagation()
+            teamTooltipContainer.classList.remove('active-overlay')
+        })
+
         // Find team members for each nba team
         for (let player of playerList) {
             if (player["TEAM"] === team.team) {
@@ -11282,12 +11294,10 @@ const createLogoGrid = () => {
                 teamTooltip.append(teamMember)
             }
         }
-        teamTooltip.addEventListener('click', (e) => {
-            e.target.style.visibility = 'hidden'
-        })
 
-        teamLogoContainer.append(teamTooltip)
         teamGrid.append(teamLogoContainer)
+        teamLogoContainer.append(teamTooltipContainer)
+        teamTooltipContainer.append(teamTooltip)
     }
 }
 
@@ -11298,6 +11308,7 @@ createLogoGrid()
 
 let howToPlayLink = document.querySelector('#how-to-play')
 let howToPlayOverlay = document.querySelector('.how-to-play')
+
 howToPlayLink.addEventListener('click', () => {
     howToPlayOverlay.classList.add('active-overlay')
 })

@@ -27,11 +27,13 @@ HOOPSIQ (Wordle Alternative)
 https://myz96.github.io/hoopsiq/
 
 ## Installation
-No need to install \\
-Play for free on any web browswer \\
+No need to install <br />
+Play for free on any web browswer <br />
 See https://myz96.github.io/hoopsiq/
 
 ## Next steps:
+- Make mobile guess tooltip a modal
+- Pull current season data from live API
 - Include a player silohette of the player to be guessed
 - Build a "Who's that NBA Great?" extension that guesses Hall of Fame players
     - Additional information such as # of MVPs, # of All-NBA picks, # of championships 
